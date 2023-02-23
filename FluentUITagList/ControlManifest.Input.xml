@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="DR" constructor="FluentUITagList" version="0.0.11" display-name-key="FluentUI TagList" description-key="FluentUI TagList" control-type="standard" >
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <data-set name="tagsDataSet" display-name-key="Tags Dataset">
+      <property-set name="tagLabel" display-name-key="Tag Label" description-key="Text of the tag" of-type="SingleLine.Text" usage="bound" required="true" />
+    </data-set>
+
+    <property name="showRecordImage" display-name-key="Show Record Image" description-key="Show the record image beside the text." of-type="Enum" usage="input" required="true">
+      <value name="false" display-name-key="false" description-key="False" default="true">false</value>
+      <value name="true" display-name-key="true" description-key="True">true</value>     
+    </property>
+
+    <property name="openRecordOnClick" display-name-key="Open Record OnClick" description-key="Open Record OnClick" of-type="Enum" usage="input" required="true">
+      <value name="false" display-name-key="false" description-key="False" default="true">false</value>
+      <value name="true" display-name-key="true" description-key="True">true</value>     
+    </property>
+
+    <property name="appearance" display-name-key="Appearance" description-key="Appearance of the Badge. Default: filled" of-type="Enum" usage="input" required="true">
+      <value name="filled" display-name-key="filled" description-key="filled" default="true">filled</value>
+      <value name="ghost" display-name-key="ghost" description-key="ghost">ghost</value>
+      <value name="outline" display-name-key="outline" description-key="outline">outline</value>
+      <value name="tint" display-name-key="tint" description-key="tint">tint</value>
+    </property>
+
+    <property name="size" display-name-key="Size" description-key="Size of the Badge. Default: medium" of-type="Enum" usage="input" required="true">
+      <value name="small" display-name-key="small" description-key="small">small</value>
+      <value name="medium" display-name-key="medium" description-key="medium" default="true">medium</value>
+      <value name="large" display-name-key="large" description-key="large">large</value>
+      <value name="extra-large" display-name-key="extra-large" description-key="extra-large">extra-large</value>
+    </property>
+
+    <property name="shape" display-name-key="Shape" description-key="Shape of the Badge. Default: circular" of-type="Enum" usage="input" required="true">
+      <value name="circular" display-name-key="circular" description-key="circular" default="true">circular</value>
+      <value name="rounded" display-name-key="rounded" description-key="rounded">rounded</value>
+      <value name="square" display-name-key="square" description-key="square">square</value>
+    </property>
+
+    <property name="color" display-name-key="Color" description-key="Color of the Badge. Default: brand" of-type="Enum" usage="input" required="true">
+      <value name="brand" display-name-key="brand" description-key="brand" default="true">brand</value>
+      <value name="danger" display-name-key="danger" description-key="danger">danger</value>
+      <value name="important" display-name-key="important" description-key="important">important</value>
+      <value name="informative" display-name-key="informative" description-key="informative">informative</value>
+      <value name="severe" display-name-key="severe" description-key="severe">severe</value>
+      <value name="subtle" display-name-key="subtle" description-key="subtle">subtle</value>
+      <value name="success" display-name-key="success" description-key="success">success</value>
+      <value name="warning" display-name-key="warning" description-key="warning">warning</value>
+    </property>
+
+    <property name="theme" display-name-key="Theme" description-key="Theme. Default: Web Light" of-type="Enum" usage="input" required="true">
+      <value name="WebLight" display-name-key="WebLight" description-key="Web Light Theme" default="true">WebLight</value>
+      <value name="WebDark" display-name-key="WebDark" description-key="Web Dark Theme">WebDark</value>
+      <value name="TeamsLight" display-name-key="TeamsLight" description-key="Teams Light Theme">TeamsLight</value>
+      <value name="TeamsDark" display-name-key="TeamsDark" description-key="Teams Dark Theme">TeamsDark</value>
+      <value name="TeamsHighContrast" display-name-key="TeamsHighContrast" description-key="Teams High Contrast Theme">TeamsHighContrast</value>
+    </property>
+
+    <resources>
+      <code path="index.ts" order="1"/>   
+    </resources>
+
+    <feature-usage>
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+  </control>
+</manifest>
