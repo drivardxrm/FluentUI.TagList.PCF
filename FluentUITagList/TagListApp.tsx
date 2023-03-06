@@ -31,8 +31,6 @@ const queryClient = new QueryClient({
   }
 })
 
-
-// eslint-disable-next-line no-undef
 const TagListApp = (props:IPcfContextServiceProps): JSX.Element => {
     const pcfcontextservice = new PcfContextService(props)
     

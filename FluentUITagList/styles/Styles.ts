@@ -7,6 +7,7 @@ export const useStyles = makeStyles({
     width: 'fit-content',
     height: 'fit-content',
     boxSizing: 'border-box',
+    verticalAlign: 'middle',
     '> *': {
       textOverflow: 'ellipsis',
     },
@@ -15,6 +16,19 @@ export const useStyles = makeStyles({
     '> :not(:last-child)': {
       marginRight: '5px',
     }
+  },
+  tag: {  
+    marginTop: '2px',
+    marginBottom: '2px',
+  },
+  link: {  
+    ':hover': {
+      textDecorationLine: 'none'
+    },
+    ':active': {
+      textDecorationLine: 'none'
+    }
+
   }
 });
 

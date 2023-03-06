@@ -1,14 +1,16 @@
 import { Badge } from "@fluentui/react-components"
 import { usePcfContext } from "../services/PcfContext"
 import { iTagInfo } from "../services/PcfContextService"
+import { useStyles } from "../styles/Styles"
 import TagImage from "./TagImage"
 
-// eslint-disable-next-line no-undef
 const Tag = ({id,name}:iTagInfo, key:string): JSX.Element => {
 
     const pcfcontext = usePcfContext()
+    const styles = useStyles();
     return(
         <Badge key={`tag-${key}`}
+          className={styles.tag}
           shape={pcfcontext.shape} 
           appearance={pcfcontext.appearance}
           color={pcfcontext.color}
