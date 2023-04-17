@@ -2,9 +2,8 @@
 
 import { FluentUITagList } from '../FluentUITagList/index';
 import { IInputs, IOutputs } from '../FluentUITagList/generated/ManifestTypes';
-import { ArgTypes, ComponentStory, Meta, Story, StoryObj } from '@storybook/react';
-import { ComponentFrameworkMockGenerator, ComponentFrameworkMockGeneratorReact, DataSetMock, EnumPropertyMock, ShkoOnline } from '@shko.online/componentframework-mock';
-import * as React from 'react';
+import { ArgTypes, Meta,  StoryObj } from '@storybook/react';
+import { ComponentFrameworkMockGenerator, DataSetMock, EnumPropertyMock, ShkoOnline } from '@shko.online/componentframework-mock';
 import { useEffect, useRef, useState } from 'react';
 import { useArgs } from '@storybook/client-api'
 import { useMemo } from '@storybook/addons';
@@ -86,7 +85,7 @@ const defaultArgs: Partial<StoryArgs> = {
   color: 'brand',
   size: 'medium',
   theme: 'WebLight',
-  showRecordImage: false,
+  showRecordImage: true,
   openRecordOnClick: false,
   imageshape: 'rounded'
 }
@@ -279,6 +278,45 @@ ShapeSquare.args = {
   shape: 'square'
 }
 
+export const ColorBrand = Template.bind({}) as StoryObj<StoryArgs>
+ColorBrand.args = {
+  color: 'brand'
+}
+
+export const ColorDanger = Template.bind({}) as StoryObj<StoryArgs>
+ColorDanger.args = {
+  color: 'danger'
+}
+
+export const ColorImportant = Template.bind({}) as StoryObj<StoryArgs>
+ColorImportant.args = {
+  color: 'important'
+}
+
+export const ColorInformative = Template.bind({}) as StoryObj<StoryArgs>
+ColorInformative.args = {
+  color: 'informative'
+}
+
+export const ColorSevere = Template.bind({}) as StoryObj<StoryArgs>
+ColorSevere.args = {
+  color: 'severe'
+}
+
+export const ColorSubtle = Template.bind({}) as StoryObj<StoryArgs>
+ColorSubtle.args = {
+  color: 'subtle'
+}
+
+export const ColorSuccess = Template.bind({}) as StoryObj<StoryArgs>
+ColorSuccess.args = {
+  color: 'success'
+}
+
+export const ColorWarning = Template.bind({}) as StoryObj<StoryArgs>
+ColorWarning.args = {
+  color: 'warning'
+}
 
 
 

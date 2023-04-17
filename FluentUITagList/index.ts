@@ -44,10 +44,14 @@ export class FluentUITagList implements ComponentFramework.StandardControl<IInpu
      */
     public updateView(context: ComponentFramework.Context<IInputs>): void
     {
-        // Add code to update control view
-        this._props.context = context
         
-        this._root.render(createElement(TagListApp, this._props)) 
+        //Ensures that the control is not updated until the dataset is loaded
+        //if(!context.parameters.tagsDataSet.loading){
+            // Add code to update control view
+            this._props.context = context
+            this._root.render(createElement(TagListApp, this._props)) 
+        //}
+        
 
     }
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="DR" constructor="FluentUITagList" version="0.0.11" display-name-key="FluentUI TagList" description-key="FluentUI TagList" control-type="standard" >
+  <control namespace="DR" constructor="FluentUITagList" version="0.0.17" display-name-key="FluentUI TagList" description-key="FluentUI TagList" control-type="standard" >
     <external-service-usage enabled="false">
     </external-service-usage>
     <data-set name="tagsDataSet" display-name-key="Tags Dataset">
-      <property-set name="tagLabel" display-name-key="Tag Label" description-key="Text of the tag" of-type="SingleLine.Text" usage="bound" required="true" />
+      <property-set name="tagLabel" display-name-key="Tag Label" description-key="Text of the tag (Bound Column)" of-type="SingleLine.Text" usage="bound" required="true" />
     </data-set>
 
     <property name="showRecordImage" display-name-key="Show Record Image" description-key="Show the record image beside the text." of-type="Enum" usage="input" required="true">

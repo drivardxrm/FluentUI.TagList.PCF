@@ -45,10 +45,27 @@ export class PcfContextService {
       this.shape = props.context.parameters.shape.raw ?? 'rounded'
       this.color = props.context.parameters.color.raw ?? 'brand'
       this.imageshape = props.context.parameters.imageshape.raw ?? 'rounded'
+
+      while(this.dataset.paging.hasNextPage){
+        this.dataset.paging.loadNextPage()
+        this.dataset.refresh()
+      }
     }
   }
 
+  // tagValues():iTagInfo[] {
+  //   let tagvalues:iTagInfo[] = []
+  //   let count = 1
+  //   do {
+  //     if(count > 1){
+  //       this.dataset?.paging.loadNextPage()
+  //     }  
+  //     tagvalues.push({...this.pageTagValues()})
 
+  //     count++
+  //   } while (this.dataset?.paging.hasNextPage);
+  //   return tagvalues
+  // }
   
   tagValues():iTagInfo[] {
     return this.dataset?.sortedRecordIds.map((recordId) => {

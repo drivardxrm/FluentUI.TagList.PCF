@@ -124,38 +124,45 @@ import StackAlt from './assets/stackalt.svg';
 **FluentUI TagList PCF** Control that turns a dataset into a Tag list (FluentUI Badges).
 
 ## Download
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/drivardxrm/IconOptionSet.PCF)
-📦https://github.com/drivardxrm/IconOptionSet.PCF/releases/latest
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/drivardxrm/FluentUI.TagList.PCF)
+📦https://github.com/drivardxrm/FluentUI.TagList.PCF/releases/latest
 
-Available icons here : https://developer.microsoft.com/en-us/fluentui#/styles/web/icons#available-icons 
 
 ## Parameters
 | Parameter         | Description                                                                                  | Default     |
 |-------------------|----------------------------------------------------------------------------------------------|----------   |
-| Primary Optionset  | Select Optionset (5 values max)                                                             |             |
-| Icon #1    | Name of icon #1, see Available icons link.                                                         | EmojiDisappointed|
-| Icon #2   | Name of icon #2, see Available icons link.                                                         | Sad   |
-| Icon #3    | Name of icon #3, see Available icons link.                                                        | EmojiNeutral     |
-| Icon #4   | Name of icon #4, see Available icons link.                                                              | Emoji2        |
-| Icon #5| Name of icon #5, see Available icons link.    | Emoji      |
-| Selected icon color| Color of selected icon.Supports literal (ex. blue, red) and RGBA color codes (ex. #da9494)   | #005A9E      |
+| Tags Dataset  | Dataset to Expose                                                             |             |
+| -> Tag Label    | Text of the tag (Dataset Bound Column)                                                         | |
+| Show Record Image   | Show the record image beside the text.                                                         | false   |
+| Open Record OnClick    | Open Record OnClick                                                        | false     |
+| Appearance   | Appearance of the Badge.                                                              | filled        |
+| Size| Size of the Badge.    | Medium      |
+| Shape| Shape of the Badge.   | Rounded      |
+| ImageShape| Shape of the Image if showRecordImage is set to true.   | Rounded      |
+| Color| Color of the Badge.   | Brand      |
+| Theme| Theme   | Web Light      |
+
 
 <div className="tip-wrapper">
   <span className="tip">Tip</span>Browse example stories now by navigating to them in the sidebar.
 View their code in the <code>stories</code> directory to learn how they work.
 </div>
+<div className="tip-wrapper">
+  <span className="tip">Acknowlegment</span> Stories implemented with the help of the <code>ComponentFramework Mock</code> library by <a href="https://shko.online/" target="_blank">Shko Online</a>
+</div>
+
 <div className="subheading">Links</div>
 <div className="link-list">
   <a
     className="link-item"
-    href="https://github.com/drivardxrm/IconOptionSet.PCF"
+    href="https://github.com/drivardxrm/FluentUI.TagList.PCF"
     target="_blank"
   >
   Github
     <GitHub width={128} height={128} />
     <span>
       <strong>GitHub Repo</strong>
-      IconOptionSet.PCF
+      FluentUI.TagList.PCF
     </span>
   </a>
   <a
@@ -167,6 +174,17 @@ View their code in the <code>stories</code> directory to learn how they work.
     <span>
       <strong>PCF Gallery</strong>
       IconOptionSet PCF
+    </span>
+  </a>
+   <a
+    className="link-item"
+    href="https://github.com/Shko-Online/ComponentFramework-Mock"
+    target="_blank"
+  >
+    <img src="https://avatars.githubusercontent.com/u/103819795?s=200&v=4" alt="Shko Online" />
+    <span>
+      <strong>Shko Online</strong>
+      ComponentFramework Mock
     </span>
   </a>
 </div> 
