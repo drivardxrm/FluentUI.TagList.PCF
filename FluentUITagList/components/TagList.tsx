@@ -1,5 +1,3 @@
-import { Badge,  FluentProvider } from '@fluentui/react-components'
-import * as React from 'react';
 import { usePcfContext } from '../services/PcfContext';
 import { useStyles } from '../styles/Styles';
 import Tag from './Tag';

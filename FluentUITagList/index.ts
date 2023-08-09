@@ -3,6 +3,8 @@ import { createRoot, Root } from 'react-dom/client';
 import { createElement } from 'react';
 import TagListApp from "./TagListApp";
 import { IPcfContextServiceProps } from "./services/PcfContextService";
+import TagListDummy, { ITagListDummyProps } from "./components/TagListDummy";
+import { iTagDummyProps } from "./components/TagDummy";
 
 
 export class FluentUITagList implements ComponentFramework.StandardControl<IInputs, IOutputs> {
@@ -10,6 +12,7 @@ export class FluentUITagList implements ComponentFramework.StandardControl<IInpu
 
     private _root: Root;
     private _props:IPcfContextServiceProps;
+    private _isDesignMode: boolean;
     /**
      * Empty constructor.
      */
@@ -31,6 +34,11 @@ export class FluentUITagList implements ComponentFramework.StandardControl<IInpu
         // Add control initialization code
         this._root = createRoot(container!)
 
+        //https://butenko.pro/2023/01/08/pcf-design-time-vs-run-time/
+        if (location.ancestorOrigins[0] === "https://make.powerapps.com") {
+            this._isDesignMode = true;
+        }
+
         this._props = {
             context: context,
             instanceid: Math.random()
@@ -45,12 +53,43 @@ export class FluentUITagList implements ComponentFramework.StandardControl<IInpu
     public updateView(context: ComponentFramework.Context<IInputs>): void
     {
         
-        //Ensures that the control is not updated until the dataset is loaded
-        //if(!context.parameters.tagsDataSet.loading){
-            // Add code to update control view
-            this._props.context = context
-            this._root.render(createElement(TagListApp, this._props)) 
-        //}
+        //if the control running in "maker" portal return a dummy rendering
+        if (this._isDesignMode) {
+            //then the method returns one component
+            const dummyProps:ITagListDummyProps = {
+                shape: context.parameters.shape.raw || "rounded",
+                appearance: context.parameters.appearance.raw || "filled",
+                color: context.parameters.color.raw || "blue",
+                size: context.parameters.size.raw || "medium",
+            }
+            this._root.render(createElement(TagListDummy,dummyProps))
+        }else{
+
+            // ref : https://www.inogic.com/blog/2019/09/get-all-the-records-of-dataset-grid-control-swiftly
+            if (!context.parameters.tagsDataSet.loading) {
+
+                if (context.parameters.tagsDataSet.paging != null && context.parameters.tagsDataSet.paging.hasNextPage == true) {
+                
+                    //set page size
+                    context.parameters.tagsDataSet.paging.setPageSize(5000);
+                
+                    //load next paging -> will call updateView again
+                    context.parameters.tagsDataSet.paging.loadNextPage();
+                
+                } 
+                else 
+                {
+                
+                    //Render when all records are loaded
+                    this._props.context = context
+                    this._root.render(createElement(TagListApp, this._props))
+                
+                }
+            
+            }
+
+        }
+        
         
 
     }

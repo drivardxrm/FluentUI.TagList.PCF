@@ -1,9 +1,8 @@
-import { Badge, Link } from "@fluentui/react-components"
+import { Link } from "@fluentui/react-components"
 import { usePcfContext } from "../services/PcfContext"
 import { iTagInfo } from "../services/PcfContextService"
 import { useStyles } from "../styles/Styles"
 import Tag from "./Tag"
-import TagImage from "./TagImage"
 
 const TagLink = ({id,name}:iTagInfo, key:string): JSX.Element => {
 

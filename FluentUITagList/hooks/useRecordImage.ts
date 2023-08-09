@@ -6,7 +6,7 @@ import { useMetadata } from './useMetadata'
 export const useRecordImage = (entityType:string, id:string) => {
   const pcfcontext = usePcfContext()
   
-  const { primaryimage } = useMetadata(pcfcontext.entityname)
+  const { primaryimage } = useMetadata(entityType)
 
   const { data, isLoading, isError } =
     useQuery<string, Error>(
