@@ -15,6 +15,7 @@ The control uses [FluentUI v9](https://react.fluentui.dev/) badges from the Flue
  
  
 # Features:
+- Can be bound to any Text column of the main dataset table
 - Supports individual record images
 - **Themable** : Supports FluentUI V9 Themes (WebLight, WebDark, TeamsLight, TeamsDark, TeamsHighContrast)
 
