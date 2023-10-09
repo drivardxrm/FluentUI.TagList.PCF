@@ -14,7 +14,6 @@ The control uses [FluentUI v9](https://react.fluentui.dev/) badges from the Flue
 [Try Component in Storybook](https://drivardxrm.github.io/FluentUI.TagList.PCF/)
  
  
- 
 # Features:
 - Supports individual record images
 - **Themable** : Supports FluentUI V9 Themes (WebLight, WebDark, TeamsLight, TeamsDark, TeamsHighContrast)
