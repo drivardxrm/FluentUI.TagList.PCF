@@ -4,7 +4,6 @@ import { createElement } from 'react';
 import TagListApp from "./TagListApp";
 import { IPcfContextServiceProps } from "./services/PcfContextService";
 import TagListDummy, { ITagListDummyProps } from "./components/TagListDummy";
-import { iTagDummyProps } from "./components/TagDummy";
 
 
 export class FluentUITagList implements ComponentFramework.StandardControl<IInputs, IOutputs> {
