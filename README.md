@@ -38,7 +38,5 @@ The control uses [FluentUI v9](https://react.fluentui.dev/) badges from the Flue
 
 # Screenshots
 
-![image](https://github.com/drivardxrm/FluentUI.TagList.PCF/assets/38399134/53e5e759-dc00-49c3-a393-c15da513fd73)
+![image](https://github.com/drivardxrm/FluentUI.TagList.PCF/assets/38399134/4a20d4c0-e66c-436b-bc60-c301886f0602)
 
-
-![image](https://github.com/drivardxrm/FluentUI.TagList.PCF/assets/38399134/128696ec-6a57-4a73-8334-c4486857387a)
