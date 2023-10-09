@@ -3,10 +3,11 @@
 PowerApps Component framework (PCF) Control to render a Tag List out of a Dataset in Dataverse Model-driven forms and Canvas Apps. 
 The control uses [FluentUI v9](https://react.fluentui.dev/) badges from the Fluent2 design system.
 
-![image](https://github.com/drivardxrm/FluentUI.TagList.PCF/assets/38399134/53e5e759-dc00-49c3-a393-c15da513fd73)
+
+![image](https://github.com/drivardxrm/FluentUI.TagList.PCF/assets/38399134/7951847b-15c3-4711-a014-ec02a0ef6664)
 
 
-![image](https://github.com/drivardxrm/FluentUI.TagList.PCF/assets/38399134/128696ec-6a57-4a73-8334-c4486857387a)
+
 
 
 [Download Here](https://github.com/drivardxrm/FluentUI.TagList.PCF/releases/latest)
@@ -35,3 +36,9 @@ The control uses [FluentUI v9](https://react.fluentui.dev/) badges from the Flue
 | Theme | Theme. (WebLight, WebDark, TeamsLight, TeamsDark, TeamsHighContrast) |   WebLight  |
 
 
+# Screenshots
+
+![image](https://github.com/drivardxrm/FluentUI.TagList.PCF/assets/38399134/53e5e759-dc00-49c3-a393-c15da513fd73)
+
+
+![image](https://github.com/drivardxrm/FluentUI.TagList.PCF/assets/38399134/128696ec-6a57-4a73-8334-c4486857387a)
