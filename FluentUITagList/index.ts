@@ -34,7 +34,7 @@ export class FluentUITagList implements ComponentFramework.StandardControl<IInpu
         this._root = createRoot(container!)
 
         //https://butenko.pro/2023/01/08/pcf-design-time-vs-run-time/
-        if (location.ancestorOrigins[0] === "https://make.powerapps.com") {
+        if (location.ancestorOrigins?.[0] === "https://make.powerapps.com") {
             this._isDesignMode = true;
         }
 
