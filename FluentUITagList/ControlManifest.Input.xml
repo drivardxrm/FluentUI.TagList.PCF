@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="DR" constructor="FluentUITagList" version="0.0.23" display-name-key="FluentUI TagList" description-key="FluentUI TagList" control-type="standard" >
+  <control namespace="DR" constructor="FluentUITagList" version="0.0.24" display-name-key="FluentUI TagList" description-key="FluentUI TagList" control-type="standard" >
     <external-service-usage enabled="false">
     </external-service-usage>
     <data-set name="tagsDataSet" display-name-key="Tags Dataset">
