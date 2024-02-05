@@ -1,4 +1,4 @@
-import { FluentProvider } from '@fluentui/react-components'
+import { FluentProvider, IdPrefixProvider } from '@fluentui/react-components'
 import { QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import TagList from './components/TagList';
 import { PcfContextProvider } from './services/PcfContext';
@@ -37,11 +37,13 @@ const TagListApp = (props:IPcfContextServiceProps): JSX.Element => {
     return (
         
         
-      <QueryClientProvider client={queryClient} contextSharing={false}>
+      <QueryClientProvider client={queryClient}>
         <PcfContextProvider pcfcontext={pcfcontextservice}>
-          <FluentProvider theme={pcfcontextservice.theme}>
-            <TagList/>
-          </FluentProvider>
+          <IdPrefixProvider value={`fluentuitaglist-${props.instanceid}-`}>
+            <FluentProvider theme={pcfcontextservice.theme}>
+              <TagList/>
+            </FluentProvider>
+          </IdPrefixProvider>
         </PcfContextProvider>
       </QueryClientProvider>
         

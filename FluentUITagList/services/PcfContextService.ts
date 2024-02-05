@@ -8,7 +8,7 @@ import { getTheme } from '../utils/theme';
 
 export interface IPcfContextServiceProps{
   context: ComponentFramework.Context<IInputs>;
-  instanceid: number;
+  instanceid: string;
 }
 
 export interface iTagInfo{
@@ -17,7 +17,7 @@ export interface iTagInfo{
 }
 
 export class PcfContextService {
-  instanceid:number;
+  instanceid:string;
   dataset : ComponentFramework.PropertyTypes.DataSet;
   context: ComponentFramework.Context<IInputs>;
   entityname : string;

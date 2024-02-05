@@ -7,8 +7,8 @@ const TagImage = ({id,name}:iTagInfo, key:string): JSX.Element => {
 
     const pcfcontext = usePcfContext()
     const imgsize = pcfcontext.size === "small" ? 14 : pcfcontext.size === "medium" ? 16 : pcfcontext.size === "large" ? 20 : 24
-    const {imagesrc, isError,isLoading} = useRecordImage(pcfcontext.entityname, id)
-    if (isLoading || isError || !imagesrc || imagesrc === '') {
+    const {imagesrc, status, isFetching} = useRecordImage(pcfcontext.entityname, id)
+    if (status == 'pending' || isFetching || !imagesrc || imagesrc === '') {
       return <></>
     } 
     else {

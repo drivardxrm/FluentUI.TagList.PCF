@@ -8,17 +8,17 @@ export const useRecordImage = (entityType:string, id:string) => {
   
   const { primaryimage } = useMetadata(entityType)
 
-  const { data, isLoading, isError } =
+  const { data, status, error, isFetching } =
     useQuery<string, Error>(
-      ['recordimage', pcfcontext.instanceid, id],
-      () => pcfcontext.getRecordImage(entityType, id, primaryimage),
       {
+        queryKey: ['recordimage', pcfcontext.instanceid, id],
+        queryFn: () => pcfcontext.getRecordImage(entityType, id, primaryimage),     
         enabled: !!primaryimage,
         staleTime: Infinity
       }
     )
 
-  return { imagesrc: data, isLoading, isError }
+  return { imagesrc: data, status, error, isFetching }
 }
 
 

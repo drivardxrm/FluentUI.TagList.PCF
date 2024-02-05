@@ -4,6 +4,7 @@ import { createElement } from 'react';
 import TagListApp from "./TagListApp";
 import { IPcfContextServiceProps } from "./services/PcfContextService";
 import TagListDummy, { ITagListDummyProps } from "./components/TagListDummy";
+import { v4 as uuidv4 } from 'uuid';
 
 
 export class FluentUITagList implements ComponentFramework.StandardControl<IInputs, IOutputs> {
@@ -40,7 +41,7 @@ export class FluentUITagList implements ComponentFramework.StandardControl<IInpu
 
         this._props = {
             context: context,
-            instanceid: Math.random()
+            instanceid: uuidv4()
         }
     }
 
